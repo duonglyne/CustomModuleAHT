@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store: etc/config.xsd">
+    <default>
+     <helloworld>
+         <general>
+             <title>Hello ! Everybody</title>
+             <content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</content>
+         </general>
+     </helloworld>
+    </default>
+</config>

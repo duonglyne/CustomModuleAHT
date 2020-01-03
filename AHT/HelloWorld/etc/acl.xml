@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instAHTce" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="AHT_HelloWorld::rsgitech" title="Rsgitech" sortOrder="51">
+                    <resource id="AHT_HelloWorld::news_allnews" title="All News" sortOrder="10">
+            <resource id="AHT_HelloWorld::save" title="Save News" trAHTslate="title" sortOrder="10" />
+            <resource id="AHT_HelloWorld::news_delete" title="Delete News" trAHTslate="title" sortOrder="20" />
+          </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="AHT_HelloWorld::news_config" title="Hello Worlds" translate="title"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,17 @@
+<?php 
+
+/**
+ * @var   AHT\HelloWorld\Block\HelloWorld $block
+ */
+
+
+?>
+<div class="box">
+	<div class="box-image">
+		<img class="image" src="<?=$block->getImage()?>" alt="error image"/>
+	</div>
+	<div class="box-content">
+		<h2 class="title"><?= $block->getTitle()?></h2>
+		<p class="content"><?=$block->getContent()?></p>
+	</div>
+</div>
