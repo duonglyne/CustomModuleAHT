@@ -1,0 +1,25 @@
+<div class="faq">
+    <a href="#"><?php echo __('FAQ'); ?></a>
+</div>
+<div class="consulting-content" id="consulting-content">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq-block')->toHtml(); ?>
+</div>
+<script>
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/modal'
+    ], function($, modal) {
+        // declaring initial options
+        var options = {
+            type: 'popup',
+            responsive: true,
+            innerScroll: true,
+            title: ''
+        };
+        var slide = modal(options, $('#consulting-content'));
+        $('.faq a').on('click', function() {
+            $('#consulting-content').modal('openModal');
+            return false;
+        });
+    });
+</script>
