@@ -1,19 +1,12 @@
 <?php
 
-namespace AHT\AddAtributeOrder\Plugin;
+namespace AHT\AddAtributeOrder\Model\Checkout;
 
-/**
- * Class ShippingInformationManagementPlugin
- * @package AHT\AddAtributeOrder\Plugin
- */
 class ShippingInformationManagementPlugin
 {
 
     protected $quoteRepository;
 
-    /**
-     * @param \Magento\Quote\Model\QuoteRepository $quoteRepository
-     */
     public function __construct(
         \Magento\Quote\Model\QuoteRepository $quoteRepository
     ) {
@@ -30,7 +23,7 @@ class ShippingInformationManagementPlugin
         $cartId,
         \Magento\Checkout\Api\Data\ShippingInformationInterface $addressInformation
     ) {
-        $extAttributes = $addressInformation->getExtensionAttributes();
+        $extAttributes = $addressInformation->getExtensionAttributes(); //order
         $orderBy = $extAttributes->getOrderBy();
         $quote = $this->quoteRepository->getActive($cartId);
         $quote->setOrderBy($orderBy);

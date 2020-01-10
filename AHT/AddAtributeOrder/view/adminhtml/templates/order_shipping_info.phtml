@@ -1,0 +1,12 @@
+<div id="order_by">
+    <strong><?php echo __('Order by') ?></strong>
+    <span class="price"><?=$block->getOrderBy() ?></span></div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#order_by').detach();
+            $('.order-shipping-method').append(element);
+        }
+    );
+</script>
